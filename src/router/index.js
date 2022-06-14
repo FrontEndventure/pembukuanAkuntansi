@@ -1,6 +1,6 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Splash} from '../pages';
+import {Jurnal, Splash} from '../pages';
 
 const Stack = createNativeStackNavigator();
 const Router = () => {
@@ -9,6 +9,11 @@ const Router = () => {
       <Stack.Screen
         name="Splash"
         component={Splash}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Jurnal"
+        component={Jurnal}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

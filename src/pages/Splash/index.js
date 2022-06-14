@@ -1,8 +1,14 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {ILSplash} from '../../assets';
 
-const Splash = () => {
+const Splash = ({navigation}) => {
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.replace('Jurnal');
+    }, 3000);
+  }, [navigation]);
+
   return (
     <View style={styles.page}>
       <Image source={ILSplash} />
